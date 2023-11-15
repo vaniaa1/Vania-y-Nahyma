@@ -44,3 +44,14 @@ print("rango 1:", rango1, "con un porcentaje de:", porr1, "%")
 print("de 2 a 5 años:", rango2, "con un porcentaje de:", porr2, "%")
 print("de 5 a 10 años:", rango3, "con un porcentaje de:", porr3, "%")
 print("mayor de 10 años:", rango4, "con un porcentaje de:", porr4, "%")
+
+
+
+
+#Funcion para hacer una password
+def ingresar_password():
+  password=""
+  while len(password)<8:
+   caracter=input("pon un simbolo para la password:")
+   password+=caracter
+  print("password completo: {}".format(password))
