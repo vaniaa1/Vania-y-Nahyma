@@ -1,0 +1,46 @@
+#Calcular sueldo de vendedores
+
+respuesta=str(input("Hay otro vendedor a registrar:"))
+while respuesta.lower()=="si":
+  nombre=str(input("escriba el nombre del vendedor:"))
+  salario_base=int(input("ingrese el salario base del vendedor:"))
+  total_ventas=int(input("ingrese el total de ventas del vendedor:"))
+  if total_ventas<3500:
+    comision=total_ventas*.07
+  elif total_ventas>=3500 and total_ventas<=7000:
+    comision=total_ventas*.15
+  sueldo_total=salario_base+ comision
+  print("el salario total de", nombre,"es de:", sueldo_total)
+  respuesta=str(input("hay otro vendedor a registrar:"))
+
+
+#Obtener estadisticas del zoologico
+
+rango1=0
+rango2=0
+rango3=0
+rango4=0
+
+respuesta=str(input("Hay otro animal a registrar:"))
+while respuesta.lower()=="si":
+  cuantos=int(input("cuantos van a registar:"))
+  edad=int(input("edad:"))
+  if edad<2:
+    rango1=rango1+cuantos 
+  elif edad >=2 and edad<=5:
+    rango2=rango2+cuantos
+  elif edad>5 and edad<=10:
+      rango3=rango3+cuantos
+  elif edad>10:
+      rango4=rango4+cuantos
+  respuesta=str(input("Hay otro animal a registrar:"))
+total=rango1+rango2+rango3+rango4
+porr1=rango1/total*100
+porr2=rango2/total*100
+porr3=rango3/total*100
+porr4=rango4/total*100
+
+print("rango 1:", rango1, "con un porcentaje de:", porr1, "%")
+print("de 2 a 5 años:", rango2, "con un porcentaje de:", porr2, "%")
+print("de 5 a 10 años:", rango3, "con un porcentaje de:", porr3, "%")
+print("mayor de 10 años:", rango4, "con un porcentaje de:", porr4, "%")
